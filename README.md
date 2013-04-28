@@ -7,4 +7,4 @@ Adds a "New File" service to Finder that creates an empty file in Finder's curre
 
     make install
 
-(or just double-click new-file.workflow)
+(or just double-click `new-file.workflow`)

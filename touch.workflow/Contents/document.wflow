@@ -21,6 +21,112 @@
 					<true/>
 					<key>Types</key>
 					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>Run AppleScript</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>on run {input, parameters}	tell application "Finder"		set cwd to POSIX path of (insertion location as alias)	end tell	return cwdend run</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>IgnoresInput</key>
+				<false/>
+				<key>InputUUID</key>
+				<string>B8A6E40E-6DC3-4CDE-9108-640CA226EFD6</string>
+				<key>Keywords</key>
+				<array>
+					<string>Run</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>91139F9F-01B4-42B4-8E4F-C7BB281A2F79</string>
+				<key>UUID</key>
+				<string>B7436A20-4EED-4944-8C55-131D5A85D0C3</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>337.000000:883.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
 						<string>com.apple.cocoa.string</string>
 					</array>
 				</dict>
@@ -60,7 +166,7 @@
 				<dict>
 					<key>COMMAND_STRING</key>
 					<string>dir="$1"
-filename=`date +%s`
+filename=" "
 full_filename=$dir/$filename
 touch "$full_filename"
 echo "$full_filename"
@@ -174,12 +280,10 @@ echo "$full_filename"
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>337.000000:648.000000</string>
+				<string>337.000000:516.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -227,7 +331,7 @@ echo "$full_filename"
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}	set posix_path to POSIX file input	tell application "Finder" to activate	tell application "Finder" to reveal posix_path	tell application "Finder" to select posix_path	tell application "System Events" to keystroke return using shift	return posix_pathend run</string>
+					<string>on run {input, parameters}	set posix_path to POSIX file input	tell application "Finder"		activate		reveal posix_path		select posix_path	end tell	tell application "System Events"		keystroke return using shift	end tell	return posix_pathend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -278,8 +382,6 @@ end run</string>
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
@@ -293,12 +395,19 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>CC15E9C8-9B95-4E97-B96C-E0AA0A1358D4</key>
+		<key>5E9DEE69-5C40-4B67-ADEA-4E3F0A4D670E</key>
 		<dict>
 			<key>from</key>
 			<string>673A9C93-9957-4BE4-BABA-1750D4FAB47C - 673A9C93-9957-4BE4-BABA-1750D4FAB47C</string>
 			<key>to</key>
 			<string>49996A9A-CFD8-4767-B829-48CD18A925A2 - 49996A9A-CFD8-4767-B829-48CD18A925A2</string>
+		</dict>
+		<key>F526D207-5235-4B29-A90D-4FC2F29F7D51</key>
+		<dict>
+			<key>from</key>
+			<string>B7436A20-4EED-4944-8C55-131D5A85D0C3 - B7436A20-4EED-4944-8C55-131D5A85D0C3</string>
+			<key>to</key>
+			<string>673A9C93-9957-4BE4-BABA-1750D4FAB47C - 673A9C93-9957-4BE4-BABA-1750D4FAB47C</string>
 		</dict>
 	</dict>
 	<key>workflowMetaData</key>
@@ -308,7 +417,7 @@ end run</string>
 		<key>serviceApplicationPath</key>
 		<string>/System/Library/CoreServices/Finder.app</string>
 		<key>serviceInputTypeIdentifier</key>
-		<string>com.apple.Automator.fileSystemObject.folder</string>
+		<string>com.apple.Automator.fileSystemObject</string>
 		<key>serviceOutputTypeIdentifier</key>
 		<string>com.apple.Automator.nothing</string>
 		<key>serviceProcessesInput</key>

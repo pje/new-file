@@ -1,7 +1,7 @@
 New File
 =====
 
-Adds a "New File" service to Finder for creating an empty file in the current directory.
+An OSX Service for creating an empty file in Finder's current directory.
 
 ####install
 

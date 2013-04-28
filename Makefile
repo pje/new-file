@@ -1,9 +1,9 @@
 DEST=~/Library/Services
 
-build: touch.workflow
+build: new-file.workflow
 
 install:
-	cp -R touch.workflow $(DEST)
+	cp -R new-file.workflow $(DEST)
 
 .PHONY: build install
 .DEFAULT: install

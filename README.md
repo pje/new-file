@@ -1,7 +1,7 @@
-touch
+New File
 =====
 
-create an empty file from within Finder.
+Adds a "New File" service to Finder.
 
 ####install
 

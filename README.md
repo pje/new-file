@@ -6,3 +6,5 @@ Adds a "New File" service to Finder that creates an empty file in Finder's curre
 ####install
 
     make install
+
+(or just double-click new-file.workflow)

@@ -1,9 +1,9 @@
 DEST=~/Library/Services
 
-build: new-file.workflow
+build: New\ File.workflow
 
 install:
-	cp -R new-file.workflow $(DEST)
+	cp -R "New File.workflow" $(DEST)
 
 .PHONY: build install
 .DEFAULT: install

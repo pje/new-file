@@ -7,4 +7,4 @@ An OSX Service for creating an empty file in Finder's current directory.
 
     make install
 
-(or just double-click `new-file.workflow`)
+(or just double-click `New File.workflow`)
